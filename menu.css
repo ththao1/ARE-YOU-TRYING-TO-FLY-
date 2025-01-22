@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'AppleGaramond';
+    src        : url('./assets/AppleGaramond-LightItalic.ttf') format('truetype');
+}
+
+html,
+body,
+p {
+    font-family: 'AppleGaramond',
+        serif;
+    margin  : 0;
+    padding : 0;
+    overflow: hidden !important;
+}

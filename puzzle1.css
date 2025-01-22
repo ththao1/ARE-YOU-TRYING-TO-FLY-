@@ -1,0 +1,172 @@
+/* Reset mặc định */
+@font-face {
+    font-family: 'AppleGaramond';
+    src        : url('./assets/AppleGaramond-LightItalic.ttf') format('truetype');
+}
+
+body {
+
+
+    margin          : 0;
+    padding         : 0;
+    font-family     : 'AppleGaramond Light Italic', sans-serif;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    height          : 100vh;
+    background-color: #111;
+    color           : #fff;
+    overflow        : hidden;
+}
+
+.container {
+    display: flex;
+    width  : 80%;
+    height : 90%;
+}
+
+.left-section {
+    width          : 80%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    position       : relative;
+}
+
+.right-section {
+    width          : 20%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : flex-start;
+    padding-left   : 20px;
+    text-align     : left;
+}
+
+.right-section h1 {
+    font-size    : 65px;
+    margin-bottom: 40rem;
+    font-family  : 'AppleGaramond',
+        serif;
+}
+
+.right-section a {
+    color          : white;
+    font-size      : 60px;
+    text-decoration: none;
+    font-family    : 'AppleGaramond',
+        serif;
+}
+
+
+
+.right-section p {
+    font-size    : 30px;
+    margin-bottom: 4rem;
+    display      : flex;
+    align-items  : center;
+}
+
+.puzzle-container {
+    display              : grid;
+    grid-template-columns: repeat(3, 270px);
+    grid-template-rows   : repeat(3, 270px);
+    gap                  : 4px;
+}
+
+.text-msg {
+    font-size: 22px !important;
+}
+
+.puzzle-piece {
+    width            : 270px;
+    height           : 270px;
+    background-size  : 850px 850px;
+    background-repeat: no-repeat;
+    transform        : rotate(0deg);
+    transition       : transform 0.3s ease, opacity 1s ease;
+    cursor           : pointer;
+}
+
+.puzzle-piece.fade-out {
+    opacity       : 0;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.flip-card {
+    position   : absolute;
+    display    : none;
+    perspective: 1000px;
+    cursor     : pointer;
+    width      : 100%;
+    height     : 100%;
+}
+
+.flip-card-inner {
+    position       : relative;
+    width          : 100%;
+    height         : 100%;
+    transform-style: preserve-3d;
+    /* Tạo không gian 3D */
+    transition     : transform 0.6s ease;
+    /* Hiệu ứng lật */
+    transform      : rotateY(0deg);
+    /* Ban đầu không lật */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position           : absolute;
+    width              : 100%;
+    height             : 100%;
+    backface-visibility: hidden;
+    /* Ẩn mặt sau khi chưa lật */
+    top                : 0;
+    left               : 0;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    font-family        : 'AppleGaramond',
+        serif;
+}
+
+.flip-card-front img {
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background: #000;
+    color     : #fff;
+    transform : rotateY(180deg);
+    z-index   : 1;
+    padding   : 20px;
+    text-align: center;
+    font-family: 'AppleGaramond',
+        serif;
+}
+
+.text-content {
+    padding: 0 25px;
+}
+
+
+.text-content h2 {
+    text-align: end;
+    font-size : 43px;
+}
+
+.text-content p {
+    line-height: 41px;
+    text-align : start;
+    font-size  : 30px;
+}

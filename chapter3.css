@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'AppleGaramond';
+    src        : url('./assets/AppleGaramond-LightItalic.ttf') format('truetype');
+}
+
+body {
+    background-color: #000;
+    color           : #fff;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    height          : 100vh;
+}
+
+
+.container {
+    height         : 100%;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+}
+
+@media screen and (max-width: 1800px) {
+
+    .tell-me {
+        bottom: -45%;
+    }
+
+}
+
+
+.header {
+    position     : relative;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-size : 85px;
+    font-style: italic;
+    position  : absolute;
+    left      : -15%;
+    top       : 0;
+    z-index   : 999 !important;
+}
+
+.quote2 {
+    font-size : 85px;
+    font-style: italic;
+    position  : absolute;
+    left      : -30%;
+    top       : 100px;
+    z-index   : 999 !important;
+}
+
+.chapter {
+    font-size: 40px;
+    position : absolute;
+    right    : 40px;
+    top      : 20px;
+    z-index  : 9999 !important;
+    cursor   : pointer;
+}
+
+.content {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.image-container {
+    display       : flex;
+    position      : relative;
+    flex-direction: column;
+}
+
+.image-container img {
+    position: relative;
+}
+
+.input_text {
+    width      : 1240px;
+    color      : black;
+    position   : absolute;
+    height     : 164px;
+    top        : 90%;
+    left       : 7%;
+    text-align : center;
+    padding    : 12px 0;
+    padding-top: 40px;
+    font-size  : 50px;
+    font-family: 'AppleGaramond',
+        serif;
+
+}
+
+
+
+.illustration {
+    width    : 80%;
+    max-width: 600px;
+}
+
+.input-container {
+    margin-top: 20px;
+}
+
+#writeButton {
+    background-color: transparent;
+    color           : #fff;
+    border          : 1px solid #fff;
+    padding         : 10px 20px;
+    font-size       : 16px;
+    cursor          : pointer;
+    transition      : all 0.3s ease;
+}
+
+#writeButton:hover {
+    background-color: #fff;
+    color           : #000;
+}
+
+.prompt {
+    margin-top: 10px;
+    font-size : 16px;
+    font-style: italic;
+}
+
+.tell-me {
+    font-size: 50px;
+    font-family: 'AppleGaramond',
+        serif;
+    font-style: italic;
+    margin-top: 20px;
+    position  : absolute;
+    bottom    : -35%;
+    left      : 33%;
+}
+
+.image-container {
+    position       : relative;
+    padding-left   : 3%;
+    display        : flex;
+    justify-content: center;
+}
+
+.text-open {
+    text-align: center;
+    font-size : 30px;
+    position  : absolute;
+    bottom    : 15px;
+    z-index   : 9999;
+    left      : 46%;
+}

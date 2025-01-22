@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Puzzle</title>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" type="text/css" href="./puzzle1.css" />
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <audio
+                id="background-sound"
+                src="./assets/sound.mp3"
+                autoplay
+                loop
+            ></audio>
+            <div class="left-section">
+                <div class="puzzle-container"></div>
+                <div class="flip-card hidden">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img
+                                src="./assets/puzzle1.png"
+                                alt="Puzzle Image"
+                                class="full-image"
+                            />
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-content">
+                                <h2>I AM NOT GOOD ENOUGH</h2>
+                                <p>
+                                    “Deadlines are really taking a toll on me. I
+                                    feel like no matter how much I do, there's
+                                    always more piling up, and it’s exhausting.
+                                    The ticking clock feels like it's mocking
+                                    me, and I can’t seem to shut my brain off at
+                                    night. Even when I try to focus, my thoughts
+                                    are all over the place. Honestly, it’s hard
+                                    to tell if I’m more scared of failing or
+                                    just desperate to get it over with. I just
+                                    want to breathe and feel like I’m not
+                                    constantly racing against time.
+                                </p>
+                                <p>
+                                    But deep down, there’s this lingering
+                                    thought that maybe I don’t deserve to
+                                    succeed, that I’m not good enough for the
+                                    success I’m chasing.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-section">
+                <a href="./menu.html"> <h1 class="hover-text">chapter</h1></a>
+                <a href="./puzzle2.html" class="right-msg">
+                    <p class="hover-text" aria-colspan="text-msg">
+                        what a messy?
+                        <box-icon
+                            name="right-arrow-alt"
+                            color="#fff"
+                            size="md"
+                        ></box-icon>
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="star-overlay"></div>
+
+        <script src="./puzzle1.js"></script>
+        <script src="./scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Puzzle</title>
+
+        <link rel="stylesheet" type="text/css" href="./puzzle3.css" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <audio
+                id="background-sound"
+                src="./assets/sound3.mp3"
+                autoplay
+                loop
+            ></audio>
+            <div class="left-section">
+                <div class="puzzle-container"></div>
+                <div class="flip-card hidden">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img
+                                src="./assets/puzzle3.png"
+                                alt="Puzzle Image"
+                                class="full-image"
+                            />
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-content">
+                                <h2>JUDGING</h2>
+                                <p>
+                                    “I feel like I’m constantly being judged,
+                                    like every move I make is being watched and
+                                    criticized. Even when people don’t say
+                                    anything, their looks, their silence—it all
+                                    feels heavy, like it’s meant to remind me
+                                    I’m not enough. The words they do say stick
+                                    with me, replaying in my head over and over,
+                                    making me doubt myself even more. I start to
+                                    believe their judgment, as if their opinions
+                                    define who I am. It’s suffocating, like no
+                                    matter what I do, I’ll never measure up. And
+                                    the worst part is, I can’t seem to turn off
+                                    that voice in my own head that keeps
+                                    agreeing with them.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-section">
+                <a href="./menu.html"> <h1 class="hover-text">chapter</h1></a>
+                <div class="arrowdiv">
+                    <a href="./puzzle2.html">
+                        <div class="left">
+                            <box-icon
+                                name="left-arrow-alt"
+                                color="#fff"
+                                size="md"
+                            ></box-icon>
+                        </div>
+                    </a>
+                    <a href="./chapter2.html">
+                        <div class="right">
+                            <box-icon
+                                name="right-arrow-alt"
+                                color="#fff"
+                                size="md"
+                            ></box-icon>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="star-overlay"></div>
+
+        <script src="./puzzle3.js"></script>
+        <script src="./scripts.js"></script>
+    </body>
+</html>

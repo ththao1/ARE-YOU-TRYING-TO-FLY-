@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chapter 2</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <style>
+            @layer utilities {
+                .bg-custom {
+                    background-image: url("./assets/menu/2a8642a940a022a7fe474050af5cd979.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                }
+            }
+
+            .fade-out {
+                opacity: 0;
+                transition: opacity 1s ease-out;
+            }
+
+            .fade-in {
+                opacity: 1;
+                transition: opacity 1s ease-in;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .user-text {
+                font-size: 60px;
+
+                text-align: center;
+                color: white;
+                opacity: 0;
+                transition: opacity 1s ease-in;
+            }
+
+            .final-text {
+                font-size: 50px;
+
+                text-align: center;
+                color: white;
+                opacity: 0;
+                transition: opacity 1s ease-in;
+            }
+        </style>
+        <link rel="stylesheet" href="./chapter2.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <audio
+                id="background-sound"
+                src="./assets/sound4.mp3"
+                autoplay
+                loop
+            ></audio>
+            <div class="image-container" id="content">
+                <p class="quote hover-text">"are you</p>
+                <p class="quote2 hover-text">trying to fly?"</p>
+                <a href="./menu.html"
+                    ><span class="chapter hover-text">chapter</span></a
+                >
+                <img
+                    src="./assets/chapter2/5571205f3feadc63a7ca2dc38cdad54f.png"
+                    alt="chapter2"
+                    class="image"
+                />
+                <textarea
+                    type="text"
+                    id="input"
+                    class="input_text"
+                    placeholder="click here to write"
+                ></textarea>
+                <p class="tell-me hover-text">tell me, what makes you tired?</p>
+            </div>
+
+            <div class="user-text hiddent" id="userText"></div>
+
+            <div class="final-text" id="finalText">I got you</div>
+            <div id="p5-container"></div>
+        </div>
+        <div class="star-overlay"></div>
+
+        <script src="./chapter2.js"></script>
+        <script src="./scripts.js"></script>
+    </body>
+</html>

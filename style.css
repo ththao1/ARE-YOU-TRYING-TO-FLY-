@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'AppleGaramond';
+    src        : url('./assets/AppleGaramond-LightItalic.ttf') format('truetype');
+}
+
+html,
+body {
+    font-family: 'AppleGaramond',
+        serif;
+    margin    : 0;
+    padding   : 0;
+    font-style: italic;
+}
+
+.subtext,
+.exploretext,
+span {
+    font-family: 'AppleGaramond',
+        serif;
+}
+
+.exploretext {
+    display        : flex;
+    align-items    : end;
+    text-align     : end;
+    justify-content: flex-end;
+}
+
+.divtext {
+    display        : flex;
+    font-size      : 44px;
+    align-items    : end;
+    text-align     : end;
+    justify-content: flex-end;
+}
+
+.bg-img {
+    background-image   : url('./assets/page1/bg.png');
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
+    display            : flex;
+    width              : 100%;
+    height             : 70%;
+    justify-content    : center;
+    align-items        : center;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(15px, -15px);
+    }
+
+    50% {
+        transform: translate(10, -15px);
+    }
+
+    75% {
+        transform: translate(-15px, -15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.floating-image {
+    animation: float 5s ease-in-out infinite;
+    position : relative;
+
+}
+
+.star-overlay {
+    position      : fixed;
+    top           : 0;
+    left          : 0;
+    width         : 100%;
+    height        : 100%;
+    pointer-events: none;
+    overflow      : hidden;
+    z-index       : 9999;
+}
+
+.star {
+    position        : absolute;
+    width           : 3px;
+    height          : 3px;
+    background-color: white;
+    border-radius   : 50%;
+    animation       : twinkle 1.2s infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.1;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}

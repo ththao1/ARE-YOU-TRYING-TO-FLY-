@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chapter 3</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @layer utilities {
+                .bg-custom {
+                    background-image: url("./assets/menu/2a8642a940a022a7fe474050af5cd979.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                }
+            }
+
+            .fade-out {
+                opacity: 0;
+                transition: opacity 1s ease-out;
+            }
+
+            .fade-in {
+                opacity: 1;
+                transition: opacity 1s ease-in;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .user-text {
+                font-size: 60px;
+                font-family: "Arial", sans-serif;
+                text-align: center;
+                color: white;
+                opacity: 0;
+                transition: opacity 1s ease-in;
+            }
+
+            .final-text {
+                font-size: 50px;
+                font-family: "Arial", sans-serif;
+                text-align: center;
+                color: white;
+                opacity: 0;
+                transition: opacity 1s ease-in;
+            }
+        </style>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./chapter3.css" />
+    </head>
+    <body>
+        <div class="container">
+            <audio
+                id="background-sound"
+                src="./assets/sound2.mp3"
+                autoplay
+                loop
+            ></audio>
+            <a href="./menu.html">
+                <span class="chapter hover-text">chapter</span></a
+            >
+            <div class="image-container" id="content">
+                <p class="quote hover-text">"are you</p>
+                <p class="quote2 hover-text">trying to fly?"</p>
+                <a href="./chapter4.html" class="explore">
+                    <div class="image-container">
+                        <img
+                            src="./assets/chapter3/748775b77bf8e81caff4a97072037c7d.png"
+                            alt="chapter2"
+                            class="image"
+                        />
+                    </div>
+                    <p class="text-open">click the letter</p></a
+                >
+            </div>
+        </div>
+        <div class="star-overlay"></div>
+
+        <script src="./chapter3.js"></script>
+        <script src="./scripts.js"></script>
+    </body>
+</html>

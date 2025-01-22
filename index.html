@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Are You Trying to Fly?</title>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @layer utilities {
+                .image-overlay {
+                    background-image: url("image.png");
+                    background-size: cover;
+                    background-position: center;
+                    opacity: 0.8;
+                    filter: brightness(1) contrast(1.2);
+                }
+            }
+        </style>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: #000;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+                font-family: "AppleGaramond Light Italic", sans-serif;
+            }
+
+            .container {
+                text-align: center;
+
+                position: relative;
+            }
+
+            .quote {
+                font-size: 4em;
+                font-weight: 300;
+            }
+
+            .subtext {
+                font-size: 2.5em;
+                font-weight: 300;
+            }
+
+            .explore {
+                margin-top: 50px;
+                font-size: 3em;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="star-overlay"></div>
+        <audio id="background-sound" src="./assets/sound2.mp3" autoplay loop></audio>
+
+        <div class="w-full h-full">
+            <div class="bg-img">
+                <img
+                    src="./assets/page1/5c9616eff93a77608440eb464aeca042.png"
+                    alt="Are You Trying to Fly?"
+                    class="floating-image"
+                />
+            </div>
+            <div class="grid grid-cols-[70%,30%] px-[15%] mt-10">
+                <div class="">
+                  <span class="quote" id="quote">"are you trying to fly?"</span>
+                    <div class="subtext" id="subtext">tell me, I don’t judge your problems</div>
+                </div>
+                <a href="./menu.html" class="divtext">
+                  <div class="exploretext" id="explore">explore</div>
+                
+            </div>
+        </div>
+
+        <script>
+           function randomTextEffect(element, originalText) {
+        const textArray = originalText.split(''); 
+        let interval;
+
+        element.addEventListener('mouseenter', () => {
+            interval = setInterval(() => {
+                const randomText = textArray
+                    .map(() => 
+                        textArray[Math.floor(Math.random() * textArray.length)]
+                    )
+                    .join('');
+                element.textContent = randomText;
+            }, 50); 
+        });
+
+        element.addEventListener('mouseleave', () => {
+            clearInterval(interval); 
+            element.textContent = originalText;
+        });
+          }
+
+            const quote = document.getElementById('quote');
+            const subtext = document.getElementById('subtext');
+            const explore = document.getElementById('explore');
+
+            randomTextEffect(quote, '"are you trying to fly?"');
+            randomTextEffect(subtext, 'tell me, I don’t judge your problems');
+            randomTextEffect(explore, 'explore');
+        </script>
+        <script src="./scripts.js"></script>
+
+    </body>
+</html>

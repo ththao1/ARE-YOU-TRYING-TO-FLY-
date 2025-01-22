@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            @layer utilities {
+                .bg-custom {
+                    background-image: url("./assets/menu/2a8642a940a022a7fe474050af5cd979.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                }
+            }
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+    </head>
+
+    <body
+        class="bg-black text-white min-h-screen flex items-center justify-center"
+    >
+        <audio
+            id="background-sound"
+            src="./assets/sound.mp3"
+            autoplay
+            loop
+        ></audio>
+
+        <div
+            class="relative w-full h-screen flex flex-col justify-center bg-custom"
+        >
+            <div class="absolute inset-0 bg-black bg-opacity-70 z-[-1]"></div>
+
+            <div
+                class="flex flex-row justify-between items-center h-full px-10"
+            >
+                <div class="w-1/2"></div>
+
+                <div
+                    class="w-1/2 text-right space-y-6 h-screen flex flex-col justify-between py-[3%]"
+                >
+                    <p class="text-[41px] italic text-gray-300 hover-text">
+                        view each chapter for a better experience.
+                    </p>
+
+                    <div>
+                        <p class="text-[50px] flex justify-between">
+                            <a
+                                href="./chapter1.html"
+                                class="transition-all duration-300"
+                            >
+                                <span
+                                    class="font-bold hover:underline transition-all duration-300"
+                                    >chapter 1</span
+                                >
+                            </a>
+                            <span class="italic hover-text"> that is hurt</span>
+                        </p>
+                        <p class="text-[50px] flex justify-between">
+                            <a
+                                href="./chapter2.html"
+                                class="transition-all duration-300"
+                            >
+                                <span
+                                    class="font-bold hover:underline transition-all duration-300"
+                                    >chapter 2</span
+                                >
+                            </a>
+                            <span class="italic hover-text"> tell me</span>
+                        </p>
+                        <p class="text-[50px] flex justify-between">
+                            <a
+                                href="./chapter3.html"
+                                class="transition-all duration-300"
+                            >
+                                <span
+                                    class="font-bold hover:underline transition-all duration-300"
+                                    >chapter 3</span
+                                >
+                            </a>
+                            <span class="italic hover-text"
+                                >for me, for you, for us</span
+                            >
+                        </p>
+                    </div>
+
+                    <!-- Câu quote -->
+                    <h1 class="text-[70px] italic font-light hover-text">
+                        "are you trying to fly?"
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="star-overlay"></div>
+        <script src="./scripts.js"></script>
+
+        <script>
+            function randomTextEffect(element, originalText) {
+                const textArray = originalText.split("");
+                let interval;
+
+                element.addEventListener("mouseenter", () => {
+                    interval = setInterval(() => {
+                        const randomText = textArray
+                            .map(
+                                () =>
+                                    textArray[
+                                        Math.floor(
+                                            Math.random() * textArray.length
+                                        )
+                                    ]
+                            )
+                            .join("");
+                        element.textContent = randomText;
+                    }, 50);
+                });
+
+                element.addEventListener("mouseleave", () => {
+                    clearInterval(interval);
+                    element.textContent = originalText;
+                });
+            }
+
+            const hoverTextElements = document.querySelectorAll(".hover-text");
+            hoverTextElements.forEach((element) => {
+                const originalText = element.textContent.trim();
+                randomTextEffect(element, originalText);
+            });
+        </script>
+    </body>
+</html>

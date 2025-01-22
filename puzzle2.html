@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Puzzle</title>
+
+        <link rel="stylesheet" type="text/css" href="./puzzle2.css" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <audio
+                id="background-sound"
+                src="./assets/sound2.mp3"
+                autoplay
+                loop
+            ></audio>
+            <div class="left-section">
+                <div class="puzzle-container"></div>
+                <div class="flip-card hidden">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img
+                                src="./assets/puzzle2.png"
+                                alt="Puzzle Image"
+                                class="full-image"
+                            />
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="text-content">
+                                <h2>I AM ALONE</h2>
+                                <p>
+                                    “Not in the sense of being physically
+                                    isolated, but in the way it feels like no
+                                    one truly sees what I’m going through. The
+                                    weight of everything sits squarely on my
+                                    shoulders, and there’s no one to share it
+                                    with. Even when I’m surrounded by people,
+                                    the silence inside me feels deafening. It’s
+                                    like I’m screaming for help, but no one can
+                                    hear me. Maybe they don’t notice, or maybe
+                                    I’ve gotten too good at hiding it. Either
+                                    way, it’s just me, facing this all by
+                                    myself.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-section">
+                <a href="./menu.html"> <h1 class="hover-text">chapter</h1></a>
+                <div class="arrowdiv">
+                    <a href="./puzzle1.html">
+                        <div class="left">
+                            <box-icon
+                                name="left-arrow-alt"
+                                color="#fff"
+                                size="md"
+                            ></box-icon>
+                        </div>
+                    </a>
+                    <a href="./puzzle3.html">
+                        <div class="right">
+                            <box-icon
+                                name="right-arrow-alt"
+                                color="#fff"
+                                size="md"
+                            ></box-icon>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="star-overlay"></div>
+
+        <script src="./puzzle2.js"></script>
+        <script src="./scripts.js"></script>
+    </body>
+</html>
